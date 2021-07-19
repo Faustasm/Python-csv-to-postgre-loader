@@ -12,7 +12,6 @@ postgre_sql_client.connect()
 importer = Importer(postgre_sql_client)
 
 files_to_import = glob("{}/**/*.csv".format(CSV_DIR), recursive=True)
-IGNORED_FILES = []
 
 for file_to_import in files_to_import:
     if file_to_import not in IGNORED_FILES:
